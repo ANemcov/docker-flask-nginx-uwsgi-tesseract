@@ -73,7 +73,11 @@ RUN git clone --depth 1 https://github.com/tesseract-ocr/tesseract.git && \
 
 # Get basic traineddata
 RUN curl -LO https://github.com/tesseract-ocr/tessdata/raw/master/deu.traineddata && \
-	mv deu.traineddata /usr/local/share/tessdata/
+	mv deu.traineddata /usr/local/share/tessdata/ && \
+	curl -LO https://github.com/tesseract-ocr/tessdata/raw/master/rus.traineddata && \
+	mv rus.traineddata /usr/local/share/tessdata/ && \
+	curl -LO https://github.com/tesseract-ocr/tessdata/raw/master/eng.traineddata && \
+	mv eng.traineddata /usr/local/share/tessdata/
 
 # install uwsgi now because it takes a little while
 RUN pip3 install uwsgi

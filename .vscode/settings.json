@@ -1,0 +1,6 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.envFile": "${workspaceFolder}/.venv",
+    "python.venvPath": "/Users/anemtsov/.virtualenvs",
+    "python.pythonPath": "/Users/anemtsov/.virtualenvs/tesseract_flask/bin/python"
+}
