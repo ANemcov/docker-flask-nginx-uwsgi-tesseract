@@ -1,0 +1,15 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Uplad file for recognition</h1>
+<form action="" method="post" name="upload" enctype="multipart/form-data"> 
+    {{form.hidden_tag()}}
+    <p>
+        Please select image for upload:<br>
+        {{form.imagefile}}<br>
+    </p>
+    <p><input type="submit" value="Upload"></p>
+    <p>{{form.desc}}</p>
+</form>
+{% endblock %}

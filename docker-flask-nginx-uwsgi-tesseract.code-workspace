@@ -6,7 +6,8 @@
 	],
 	"settings": {
 		"cSpell.words": [
-			"jsonify"
+			"jsonify",
+			"pytesseract"
 		]
 	}
 }

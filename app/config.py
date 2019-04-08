@@ -1,0 +1,9 @@
+import os
+from flask_uploads import IMAGES
+
+CSRF_ENABLED = True
+SECRET_KEY = 'ZCYHWoFRykhCZC2duq8dP2cUaCkwGn3e'
+UPLOADED_FILES_ALLOW = IMAGES
+UPLOADED_IMAGES_DEST = os.getcwd()
+UPLOAD_FOLDER = os.getcwd()
+MAX_CONTENT_LENGTH = 16 * 1024 * 1024

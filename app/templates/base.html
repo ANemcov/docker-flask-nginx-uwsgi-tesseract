@@ -1,0 +1,14 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{title}} - Tesseract Recognition</title>
+    {% else %}
+    <title>Tesseract Recognition</title>
+    {% endif %}
+  </head>
+  <body>
+    <div>Tesseract Recognition: <a href="/">Home</a></div>
+    <hr>
+    {% block content %}{% endblock %}
+  </body>
+</html>
