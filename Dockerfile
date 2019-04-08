@@ -1,22 +1,28 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER Dockerfiles
+
+# Set timezone
+ENV TZ=Europe/Moscow
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Install required packages and remove the apt packages cache when done.
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
     autoconf \
+	apt-utils \
     autoconf-archive \
     automake \
     build-essential\
 	git \
-	libcv-dev \
+	# libcv-dev \
 	libjpeg-dev \
 	libjpeg8-dev \
 	libleptonica-dev \
 	libopencv-dev \
-	libpng12-dev \
+	libpng-dev \
+	# libpng12-dev \
 	libtesseract-dev \
 	libtiff5-dev \
 	libtool \
@@ -30,6 +36,10 @@ RUN apt-get update && \
 	sqlite3 \
 	tesseract-ocr \
 	zlib1g-dev \
+	cmake libgtk2.0-dev libavcodec-dev libavformat-dev libswscale-dev \
+	python-dev python-numpy libtbb2 libtbb-dev libtiff-dev \
+	# libjasper-dev \
+	libdc1394-22-dev \
 	curl wget locales && \
 	pip3 install -U pip setuptools && \
    rm -rf /var/lib/apt/lists/*
