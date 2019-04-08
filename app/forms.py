@@ -4,6 +4,7 @@ from wtforms.validators import Required
 from flask_wtf.file import FileField, FileRequired, FileAllowed
 from flask_uploads import UploadSet, IMAGES
 
+# IMAGES += ('pdf',)
 images = UploadSet('images', IMAGES)
     
 class LoginForm(FlaskForm):

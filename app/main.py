@@ -15,6 +15,7 @@ app.config.from_object('config')
 from forms import LoginForm, UploadForm
 from flask_uploads import UploadSet, IMAGES, configure_uploads
 
+# IMAGES += ('pdf',)
 images = UploadSet('images', IMAGES)
 configure_uploads(app, images)
 
